@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: url("https://source.unsplash.com/1600x900/?nature,water")
+          no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      .form-title {
+        margin-bottom: 20px;
+        color: #007bff;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004080;
+      }
+      .result-container {
+        display: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      .btn-back {
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
+      .btn-back:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="form-title text-center">Form Pendaftaran</h2>
+      <form id="registrationForm">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nama">Nama:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  placeholder="Masukkan nama"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="marga">Marga:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="marga"
+                  placeholder="Masukkan marga"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tempat">Tempat:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="tempat"
+                placeholder="Masukkan tempat lahir"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="tanggalLahir">Tanggal Lahir:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="tanggalLahir"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Jenis Kelamin:</label><br />
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="jkLaki"
+                  value="Laki-laki"
+                />
+                <label class="form-check-label" for="jkLaki">Laki-laki</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="jkPerempuan"
+                  value="Perempuan"
+                />
+                <label class="form-check-label" for="jkPerempuan"
+                  >Perempuan</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="jurusan">Jurusan yang Dipilih:</label>
+              <select class="form-control" id="jurusan" required>
+                <option value="">Pilih jurusan</option>
+                <option value="D3 Teknik Sipil">D3 Teknik Sipil</option>
+                <option value="D4 Teknik Sipil">D4 Teknik Sipil</option>
+                <option value="D3 Manajemen Informatika">
+                  D3 Manajemen Informatika
+                </option>
+                <option value="D3 Agroindustri">D3 Agroindustri</option>
+                <option value="D3 Teknik Mesin">D3 Teknik Mesin</option>
+                <option value="D3 Teknik Listrik">D3 Teknik Listrik</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="alamat">Alamat:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                placeholder="Masukkan alamat"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="hobi">Hobi:</label>
+              <select class="form-control" id="hobi" required>
+                <option value="">Pilih hobi</option>
+                <option value="Menyanyi">Menyanyi</option>
+                <option value="Bermain Gitar">Main Gitar</option>
+                <option value="Bermain Game">Bermain Game</option>
+                <option value="Badminton">Badminton</option>
+                <option value="Nonton">Nonton</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="asal_sekolah">Asal Sekolah:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="asal_sekolah"
+                placeholder="Masukkan asal sekolah"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Masukkan email"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              onclick="submitForm()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="result-container" id="resultContainer">
+        <h3 class="text-center">Data Pendaftaran</h3>
+        <p><strong>Nama:</strong> <span id="resultNama"></span></p>
+        <p><strong>Marga:</strong> <span id="resultMarga"></span></p>
+        <p>
+          <strong>Tempat Tanggal Lahir:</strong>
+          <span id="resultTempat"></span> <span id="resultTanggalLahir"></span>
+        </p>
+        <p><strong>Jenis Kelamin:</strong> <span id="resultJK"></span></p>
+        <p>
+          <strong>Jurusan yang Dipilih:</strong>
+          <span id="resultJurusan"></span>
+        </p>
+        <p><strong>Alamat:</strong> <span id="resultAlamat"></span></p>
+        <p><strong>Hobi:</strong> <span id="resultHobi"></span></p>
+        <p>
+          <strong>Asal Sekolah:</strong> <span id="resultAsalSekolah"></span>
+        </p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <button type="button" class="btn btn-back btn-block" onclick="goBack()">
+          Kembali
+        </button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function submitForm() {
+        // Ambil data dari form
+        const nama = document.getElementById("nama").value;
+        const marga = document.getElementById("marga").value;
+        const tempat = document.getElementById("tempat").value;
+        const tanggalLahir = document.getElementById("tanggalLahir").value;
+        const jkLaki = document.getElementById("jkLaki").checked
+          ? "Laki-laki"
+          : "";
+        const jkPerempuan = document.getElementById("jkPerempuan").checked
+          ? "Perempuan"
+          : "";
+        const jenisKelamin = jkLaki || jkPerempuan;
+        const jurusan = document.getElementById("jurusan").value;
+        const alamat = document.getElementById("alamat").value;
+        const hobi = document.getElementById("hobi").value;
+        const asalSekolah = document.getElementById("asal_sekolah").value;
+        const email = document.getElementById("email").value;
+
+        // Tampilkan hasil
+        document.getElementById("resultNama").textContent = nama;
+        document.getElementById("resultMarga").textContent = marga;
+        document.getElementById("resultTempat").textContent = tempat;
+        document.getElementById("resultTanggalLahir").textContent =
+          tanggalLahir;
+        document.getElementById("resultJK").textContent = jenisKelamin;
+        document.getElementById("resultJurusan").textContent = jurusan;
+        document.getElementById("resultAlamat").textContent = alamat;
+        document.getElementById("resultHobi").textContent = hobi;
+        document.getElementById("resultAsalSekolah").textContent = asalSekolah;
+        document.getElementById("resultEmail").textContent = email;
+
+        // Tampilkan div hasil
+        document.getElementById("resultContainer").style.display = "block";
+        // Sembunyikan form
+        document.querySelector(".container form").style.display = "none";
+      }
+
+      function goBack() {
+        // Sembunyikan div hasil
+        document.getElementById("resultContainer").style.display = "none";
+        // Tampilkan kembali form
+        document.querySelector(".container form").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
